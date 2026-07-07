@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Birthday Surprise ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(
+        135deg,
+        #ff4f81,
+        #ff8fb1,
+        #ffd6e7
+    );
+
+    font-family:'Poppins',sans-serif;
+    overflow:hidden;
+}
+
+.container{
+
+    background:rgba(255,255,255,0.2);
+
+    backdrop-filter:blur(15px);
+
+    padding:40px;
+
+    border-radius:30px;
+
+    text-align:center;
+
+    width:90%;
+    max-width:450px;
+
+    border:2px solid rgba(255,255,255,0.3);
+}
+
+h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:3rem;
+
+    color:white;
+
+    margin-bottom:15px;
+}
+
+p{
+
+    color:white;
+
+    margin-bottom:25px;
+}
+
+input{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:25px;
+
+    outline:none;
+
+    margin-bottom:15px;
+
+    text-align:center;
+}
+
+button{
+
+    padding:12px 30px;
+
+    border:none;
+
+    border-radius:25px;
+
+    background:#ff2f92;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:16px;
+}
+
+button:hover{
+
+    transform:scale(1.05);
+}
+
+#error{
+
+    margin-top:15px;
+
+    color:#fff;
+
+    font-size:14px;
+}
+
+/* Floating Hearts */
+
+.heart{
+
+    position:absolute;
+
+    font-size:30px;
+
+    animation:float 8s linear infinite;
+}
+
+@keyframes float{
+
+    from{
+        transform:translateY(100vh);
+    }
+
+    to{
+        transform:translateY(-120vh);
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="heart" style="left:10%">❤️</div>
+<div class="heart" style="left:30%; animation-delay:2s;">💖</div>
+<div class="heart" style="left:60%; animation-delay:4s;">💕</div>
+<div class="heart" style="left:85%; animation-delay:1s;">💗</div>
+
+<div class="container">
+
+    <h1>Birthday Surprise ❤️</h1>
+
+    <p>
+        A special surprise is waiting for you...
+    </p>
+
+    <input
+        type="password"
+        id="password"
+        placeholder="Enter Secret Password">
+
+    <button onclick="checkPassword()">
+        Open Surprise 🎁
+    </button>
+
+    <div id="error"></div>
+
+</div>
+
+<script>
+
+function checkPassword(){
+
+    const pass =
+    document.getElementById("password").value;
+
+    if(pass === "16/06/2006"){
+
+        window.location.href =
+        "WelcomePage.html";
+
+    }else{
+
+        document.getElementById("error")
+        .innerHTML =
+        "❌ Wrong Password";
+    }
+}
+
+</script>
+
+</body>
+</html>

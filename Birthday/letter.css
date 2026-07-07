@@ -1,0 +1,136 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    overflow-y:auto;
+    overflow-x:hidden;
+    padding:40px 0;
+    
+}
+
+.letter-container{
+    width:90%;
+    max-width:800px;
+    padding:40px;
+    
+}
+
+
+h1{
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:3.5rem;
+
+    color:#ff1493;
+
+    margin-bottom:25px;
+}
+
+.letter{
+
+    text-align:left;
+
+    font-size:1.1rem;
+
+    line-height:1.9;
+
+    color:#444;
+}
+
+.letter p{
+
+    margin-bottom:15px;
+
+    opacity:0;
+
+    animation:fadeIn 1s forwards;
+}
+
+.letter p:nth-child(1){animation-delay:1s;}
+.letter p:nth-child(2){animation-delay:2s;}
+.letter p:nth-child(3){animation-delay:3s;}
+.letter p:nth-child(4){animation-delay:4s;}
+.letter p:nth-child(5){animation-delay:5s;}
+.letter p:nth-child(6){animation-delay:6s;}
+.letter p:nth-child(7){animation-delay:7s;}
+.letter p:nth-child(8){animation-delay:8s;}
+
+.signature{
+
+    text-align:right;
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:2rem;
+
+    color:#ff1493;
+}
+
+.final-message{
+
+    margin-top:30px;
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:2.3rem;
+
+    color:#ff1493;
+
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes glow{
+
+    from{
+        text-shadow:
+        0 0 10px pink;
+    }
+
+    to{
+        text-shadow:
+        0 0 20px pink,
+        0 0 40px pink;
+    }
+}
+
+.floating-heart{
+
+    position:fixed;
+
+    font-size:25px;
+
+    pointer-events:none;
+}
+
+@media(max-width:768px){
+
+    h1{
+        font-size:2.5rem;
+    }
+
+    .letter{
+        font-size:1rem;
+    }
+
+    .final-message{
+        font-size:1.8rem;
+    }
+}
